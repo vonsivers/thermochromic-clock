@@ -1,0 +1,898 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev "1"
+Comp ""
+Comment1 "Designed for AISLER 2-Layer Service"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	1300 2300 1150 2300
+Wire Wire Line
+	1300 2200 1150 2200
+Wire Wire Line
+	1300 2100 1150 2100
+Wire Wire Line
+	1300 2000 1150 2000
+Wire Wire Line
+	1300 1800 1150 1800
+Wire Wire Line
+	2700 1800 2900 1800
+Wire Wire Line
+	1300 2400 800  2400
+Wire Wire Line
+	2700 2600 2900 2600
+Wire Wire Line
+	1300 2600 1150 2600
+Text Label 1150 1900 0    50   ~ 0
+SER
+Text Label 2900 2500 0    50   ~ 0
+RCK
+Text Label 2900 2400 0    50   ~ 0
+SRCK
+Wire Wire Line
+	2700 2500 2900 2500
+Wire Wire Line
+	2700 2400 2900 2400
+Wire Wire Line
+	1300 1900 1150 1900
+$Comp
+L SamacSys_Parts:TPIC6B595N IC1
+U 1 1 5EE7A8FE
+P 1300 1700
+F 0 "IC1" H 2000 1965 50  0000 C CNN
+F 1 "TPIC6B595N" H 2000 1874 50  0000 C CNN
+F 2 "SamacSys_Parts:DIP794W53P254L2540H508Q20N" H 2550 1800 50  0001 L CNN
+F 3 "http://www.ti.com/lit/gpn/tpic6b595" H 2550 1700 50  0001 L CNN
+F 4 "POWER LOGIC 8-BIT SHIFT REGISTER" H 2550 1600 50  0001 L CNN "Description"
+F 5 "5.08" H 2550 1500 50  0001 L CNN "Height"
+F 6 "595-TPIC6B595N" H 2550 1400 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPIC6B595N?qs=JHHQeKcAU3Cy7hDGJZD9fw%3D%3D" H 2550 1300 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Texas Instruments" H 2550 1200 50  0001 L CNN "Manufacturer_Name"
+F 9 "TPIC6B595N" H 2550 1100 50  0001 L CNN "Manufacturer_Part_Number"
+	1    1300 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCU_Module:WeMos_D1_mini U1
+U 1 1 6086F453
+P 1800 4100
+F 0 "U1" H 1800 3211 50  0000 C CNN
+F 1 "WeMos_D1_mini" H 1800 3120 50  0000 C CNN
+F 2 "Module:WEMOS_D1_mini_light" H 1800 2950 50  0001 C CNN
+F 3 "https://wiki.wemos.cc/products:d1:d1_mini#documentation" H -50 2950 50  0001 C CNN
+	1    1800 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0101
+U 1 1 60870B40
+P 1900 3300
+F 0 "#PWR0101" H 1900 3150 50  0001 C CNN
+F 1 "+3.3V" H 1915 3473 50  0000 C CNN
+F 2 "" H 1900 3300 50  0001 C CNN
+F 3 "" H 1900 3300 50  0001 C CNN
+	1    1900 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 60871171
+P 1800 4900
+F 0 "#PWR0102" H 1800 4650 50  0001 C CNN
+F 1 "GND" V 1805 4772 50  0000 R CNN
+F 2 "" H 1800 4900 50  0001 C CNN
+F 3 "" H 1800 4900 50  0001 C CNN
+	1    1800 4900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2200 3800 2300 3800
+Wire Wire Line
+	2200 3900 2300 3900
+Text Label 2300 4200 0    50   ~ 0
+SER
+Text Label 2300 3800 0    50   ~ 0
+SRCK
+Text Label 2300 3900 0    50   ~ 0
+RCK
+$Comp
+L power:GND #PWR0103
+U 1 1 60882965
+P 2900 1800
+F 0 "#PWR0103" H 2900 1550 50  0001 C CNN
+F 1 "GND" H 2905 1627 50  0000 C CNN
+F 2 "" H 2900 1800 50  0001 C CNN
+F 3 "" H 2900 1800 50  0001 C CNN
+	1    2900 1800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 60882E20
+P 2900 2600
+F 0 "#PWR0104" H 2900 2350 50  0001 C CNN
+F 1 "GND" H 2905 2427 50  0000 C CNN
+F 2 "" H 2900 2600 50  0001 C CNN
+F 3 "" H 2900 2600 50  0001 C CNN
+	1    2900 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 60894686
+P 1150 2600
+F 0 "#PWR0105" H 1150 2350 50  0001 C CNN
+F 1 "GND" H 1155 2427 50  0000 C CNN
+F 2 "" H 1150 2600 50  0001 C CNN
+F 3 "" H 1150 2600 50  0001 C CNN
+	1    1150 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0106
+U 1 1 608BC2DF
+P 1700 3300
+F 0 "#PWR0106" H 1700 3150 50  0001 C CNN
+F 1 "+5V" H 1715 3473 50  0000 C CNN
+F 2 "" H 1700 3300 50  0001 C CNN
+F 3 "" H 1700 3300 50  0001 C CNN
+	1    1700 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 2500 950  2500
+Text Label 950  2500 0    50   ~ 0
+ENABLE
+$Comp
+L Device:R R1
+U 1 1 608DF1A3
+P 800 2250
+F 0 "R1" H 730 2204 50  0000 R CNN
+F 1 "10k" H 730 2295 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 730 2250 50  0001 C CNN
+F 3 "~" H 800 2250 50  0001 C CNN
+	1    800  2250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR0107
+U 1 1 608E2E8B
+P 1150 1000
+F 0 "#PWR0107" H 1150 850 50  0001 C CNN
+F 1 "+3.3V" V 1165 1128 50  0000 L CNN
+F 2 "" H 1150 1000 50  0001 C CNN
+F 3 "" H 1150 1000 50  0001 C CNN
+	1    1150 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 608E6014
+P 1500 1350
+F 0 "#PWR0108" H 1500 1100 50  0001 C CNN
+F 1 "GND" H 1505 1177 50  0000 C CNN
+F 2 "" H 1500 1350 50  0001 C CNN
+F 3 "" H 1500 1350 50  0001 C CNN
+	1    1500 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 608E75DF
+P 1500 1200
+F 0 "C1" H 1615 1246 50  0000 L CNN
+F 1 "0.1uF" H 1615 1155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1538 1050 50  0001 C CNN
+F 3 "~" H 1500 1200 50  0001 C CNN
+	1    1500 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 1050 1150 1050
+Wire Wire Line
+	1150 1050 1150 1000
+Wire Wire Line
+	1150 1050 800  1050
+Wire Wire Line
+	800  1050 800  2100
+Connection ~ 1150 1050
+Wire Wire Line
+	1150 1050 1150 1800
+Text Label 1150 2000 0    50   ~ 0
+1A
+Text Label 1150 2100 0    50   ~ 0
+1B
+Text Label 1150 2200 0    50   ~ 0
+1C
+Text Label 1150 2300 0    50   ~ 0
+1D
+Wire Wire Line
+	2700 2300 2900 2300
+Wire Wire Line
+	2700 2200 2900 2200
+Wire Wire Line
+	2700 2100 2900 2100
+Wire Wire Line
+	2700 2000 2900 2000
+Wire Wire Line
+	3800 2300 3650 2300
+Wire Wire Line
+	3800 2200 3650 2200
+Wire Wire Line
+	3800 2100 3650 2100
+Wire Wire Line
+	3800 2000 3650 2000
+Wire Wire Line
+	3800 1800 3650 1800
+Wire Wire Line
+	5200 1800 5400 1800
+Wire Wire Line
+	3800 2400 3300 2400
+Wire Wire Line
+	5200 2600 5400 2600
+Wire Wire Line
+	3800 2600 3650 2600
+Text Label 5400 2500 0    50   ~ 0
+RCK
+Wire Wire Line
+	5200 2500 5400 2500
+Wire Wire Line
+	5200 2400 5400 2400
+Wire Wire Line
+	3800 1900 2700 1900
+$Comp
+L SamacSys_Parts:TPIC6B595N IC2
+U 1 1 6091A045
+P 3800 1700
+F 0 "IC2" H 4500 1965 50  0000 C CNN
+F 1 "TPIC6B595N" H 4500 1874 50  0000 C CNN
+F 2 "SamacSys_Parts:DIP794W53P254L2540H508Q20N" H 5050 1800 50  0001 L CNN
+F 3 "http://www.ti.com/lit/gpn/tpic6b595" H 5050 1700 50  0001 L CNN
+F 4 "POWER LOGIC 8-BIT SHIFT REGISTER" H 5050 1600 50  0001 L CNN "Description"
+F 5 "5.08" H 5050 1500 50  0001 L CNN "Height"
+F 6 "595-TPIC6B595N" H 5050 1400 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPIC6B595N?qs=JHHQeKcAU3Cy7hDGJZD9fw%3D%3D" H 5050 1300 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Texas Instruments" H 5050 1200 50  0001 L CNN "Manufacturer_Name"
+F 9 "TPIC6B595N" H 5050 1100 50  0001 L CNN "Manufacturer_Part_Number"
+	1    3800 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 6091A04F
+P 5400 1800
+F 0 "#PWR0109" H 5400 1550 50  0001 C CNN
+F 1 "GND" H 5405 1627 50  0000 C CNN
+F 2 "" H 5400 1800 50  0001 C CNN
+F 3 "" H 5400 1800 50  0001 C CNN
+	1    5400 1800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 6091A059
+P 5400 2600
+F 0 "#PWR0110" H 5400 2350 50  0001 C CNN
+F 1 "GND" H 5405 2427 50  0000 C CNN
+F 2 "" H 5400 2600 50  0001 C CNN
+F 3 "" H 5400 2600 50  0001 C CNN
+	1    5400 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 6091A063
+P 3650 2600
+F 0 "#PWR0111" H 3650 2350 50  0001 C CNN
+F 1 "GND" H 3655 2427 50  0000 C CNN
+F 2 "" H 3650 2600 50  0001 C CNN
+F 3 "" H 3650 2600 50  0001 C CNN
+	1    3650 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 2500 3450 2500
+Text Label 3450 2500 0    50   ~ 0
+ENABLE
+$Comp
+L Device:R R2
+U 1 1 6091A06F
+P 3300 2250
+F 0 "R2" H 3230 2204 50  0000 R CNN
+F 1 "10k" H 3230 2295 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3230 2250 50  0001 C CNN
+F 3 "~" H 3300 2250 50  0001 C CNN
+	1    3300 2250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR0112
+U 1 1 6091A079
+P 3650 1000
+F 0 "#PWR0112" H 3650 850 50  0001 C CNN
+F 1 "+3.3V" V 3665 1128 50  0000 L CNN
+F 2 "" H 3650 1000 50  0001 C CNN
+F 3 "" H 3650 1000 50  0001 C CNN
+	1    3650 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0113
+U 1 1 6091A083
+P 4000 1350
+F 0 "#PWR0113" H 4000 1100 50  0001 C CNN
+F 1 "GND" H 4005 1177 50  0000 C CNN
+F 2 "" H 4000 1350 50  0001 C CNN
+F 3 "" H 4000 1350 50  0001 C CNN
+	1    4000 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 6091A08D
+P 4000 1200
+F 0 "C2" H 4115 1246 50  0000 L CNN
+F 1 "0.1uF" H 4115 1155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4038 1050 50  0001 C CNN
+F 3 "~" H 4000 1200 50  0001 C CNN
+	1    4000 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 1050 3650 1050
+Wire Wire Line
+	3650 1050 3650 1000
+Wire Wire Line
+	3650 1050 3300 1050
+Wire Wire Line
+	3300 1050 3300 2100
+Connection ~ 3650 1050
+Wire Wire Line
+	3650 1050 3650 1800
+Text Label 3650 2000 0    50   ~ 0
+2A
+Text Label 3650 2100 0    50   ~ 0
+2B
+Text Label 3650 2200 0    50   ~ 0
+2C
+Text Label 3650 2300 0    50   ~ 0
+2D
+Wire Wire Line
+	5200 2300 5400 2300
+Wire Wire Line
+	5200 2200 5400 2200
+Wire Wire Line
+	5200 2100 5400 2100
+Wire Wire Line
+	5200 2000 5400 2000
+Text Label 5400 2400 0    50   ~ 0
+SRCK
+Wire Wire Line
+	6300 2300 6150 2300
+Wire Wire Line
+	6300 2200 6150 2200
+Wire Wire Line
+	6300 2100 6150 2100
+Wire Wire Line
+	6300 2000 6150 2000
+Wire Wire Line
+	6300 1800 6150 1800
+Wire Wire Line
+	7700 1800 7900 1800
+Wire Wire Line
+	6300 2400 5800 2400
+Wire Wire Line
+	7700 2600 7900 2600
+Wire Wire Line
+	6300 2600 6150 2600
+Text Label 7900 2500 0    50   ~ 0
+RCK
+Text Label 7900 2400 0    50   ~ 0
+SRCK
+Wire Wire Line
+	7700 2500 7900 2500
+Wire Wire Line
+	7700 2400 7900 2400
+Wire Wire Line
+	6300 1900 5200 1900
+$Comp
+L SamacSys_Parts:TPIC6B595N IC3
+U 1 1 60928173
+P 6300 1700
+F 0 "IC3" H 7000 1965 50  0000 C CNN
+F 1 "TPIC6B595N" H 7000 1874 50  0000 C CNN
+F 2 "SamacSys_Parts:DIP794W53P254L2540H508Q20N" H 7550 1800 50  0001 L CNN
+F 3 "http://www.ti.com/lit/gpn/tpic6b595" H 7550 1700 50  0001 L CNN
+F 4 "POWER LOGIC 8-BIT SHIFT REGISTER" H 7550 1600 50  0001 L CNN "Description"
+F 5 "5.08" H 7550 1500 50  0001 L CNN "Height"
+F 6 "595-TPIC6B595N" H 7550 1400 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPIC6B595N?qs=JHHQeKcAU3Cy7hDGJZD9fw%3D%3D" H 7550 1300 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Texas Instruments" H 7550 1200 50  0001 L CNN "Manufacturer_Name"
+F 9 "TPIC6B595N" H 7550 1100 50  0001 L CNN "Manufacturer_Part_Number"
+	1    6300 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0114
+U 1 1 6092817D
+P 7900 1800
+F 0 "#PWR0114" H 7900 1550 50  0001 C CNN
+F 1 "GND" H 7905 1627 50  0000 C CNN
+F 2 "" H 7900 1800 50  0001 C CNN
+F 3 "" H 7900 1800 50  0001 C CNN
+	1    7900 1800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0115
+U 1 1 60928187
+P 7900 2600
+F 0 "#PWR0115" H 7900 2350 50  0001 C CNN
+F 1 "GND" H 7905 2427 50  0000 C CNN
+F 2 "" H 7900 2600 50  0001 C CNN
+F 3 "" H 7900 2600 50  0001 C CNN
+	1    7900 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0116
+U 1 1 60928191
+P 6150 2600
+F 0 "#PWR0116" H 6150 2350 50  0001 C CNN
+F 1 "GND" H 6155 2427 50  0000 C CNN
+F 2 "" H 6150 2600 50  0001 C CNN
+F 3 "" H 6150 2600 50  0001 C CNN
+	1    6150 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 2500 5950 2500
+Text Label 5950 2500 0    50   ~ 0
+ENABLE
+$Comp
+L Device:R R17
+U 1 1 6092819D
+P 5800 2250
+F 0 "R17" H 5730 2204 50  0000 R CNN
+F 1 "10k" H 5730 2295 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5730 2250 50  0001 C CNN
+F 3 "~" H 5800 2250 50  0001 C CNN
+	1    5800 2250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR0117
+U 1 1 609281A7
+P 6150 1000
+F 0 "#PWR0117" H 6150 850 50  0001 C CNN
+F 1 "+3.3V" V 6165 1128 50  0000 L CNN
+F 2 "" H 6150 1000 50  0001 C CNN
+F 3 "" H 6150 1000 50  0001 C CNN
+	1    6150 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0118
+U 1 1 609281B1
+P 6500 1350
+F 0 "#PWR0118" H 6500 1100 50  0001 C CNN
+F 1 "GND" H 6505 1177 50  0000 C CNN
+F 2 "" H 6500 1350 50  0001 C CNN
+F 3 "" H 6500 1350 50  0001 C CNN
+	1    6500 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 609281BB
+P 6500 1200
+F 0 "C3" H 6615 1246 50  0000 L CNN
+F 1 "0.1uF" H 6615 1155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6538 1050 50  0001 C CNN
+F 3 "~" H 6500 1200 50  0001 C CNN
+	1    6500 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 1050 6150 1050
+Wire Wire Line
+	6150 1050 6150 1000
+Wire Wire Line
+	6150 1050 5800 1050
+Wire Wire Line
+	5800 1050 5800 2100
+Connection ~ 6150 1050
+Wire Wire Line
+	6150 1050 6150 1800
+Text Label 6150 2000 0    50   ~ 0
+3A
+Text Label 6150 2100 0    50   ~ 0
+3B
+Text Label 6150 2200 0    50   ~ 0
+3C
+Text Label 6150 2300 0    50   ~ 0
+3D
+Wire Wire Line
+	7700 2300 7900 2300
+Wire Wire Line
+	7700 2200 7900 2200
+Wire Wire Line
+	7700 2100 7900 2100
+Wire Wire Line
+	9000 2300 8850 2300
+Wire Wire Line
+	9000 2200 8850 2200
+Wire Wire Line
+	9000 2100 8850 2100
+Wire Wire Line
+	9000 2000 8850 2000
+Wire Wire Line
+	9000 1800 8850 1800
+Wire Wire Line
+	10400 1800 10600 1800
+Wire Wire Line
+	9000 2400 8500 2400
+Wire Wire Line
+	10400 2600 10600 2600
+Wire Wire Line
+	9000 2600 8850 2600
+Text Label 10600 2500 0    50   ~ 0
+RCK
+Text Label 10600 2400 0    50   ~ 0
+SRCK
+Wire Wire Line
+	10400 2500 10600 2500
+Wire Wire Line
+	10400 2400 10600 2400
+$Comp
+L SamacSys_Parts:TPIC6B595N IC4
+U 1 1 6092E62F
+P 9000 1700
+F 0 "IC4" H 9700 1965 50  0000 C CNN
+F 1 "TPIC6B595N" H 9700 1874 50  0000 C CNN
+F 2 "SamacSys_Parts:DIP794W53P254L2540H508Q20N" H 10250 1800 50  0001 L CNN
+F 3 "http://www.ti.com/lit/gpn/tpic6b595" H 10250 1700 50  0001 L CNN
+F 4 "POWER LOGIC 8-BIT SHIFT REGISTER" H 10250 1600 50  0001 L CNN "Description"
+F 5 "5.08" H 10250 1500 50  0001 L CNN "Height"
+F 6 "595-TPIC6B595N" H 10250 1400 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPIC6B595N?qs=JHHQeKcAU3Cy7hDGJZD9fw%3D%3D" H 10250 1300 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Texas Instruments" H 10250 1200 50  0001 L CNN "Manufacturer_Name"
+F 9 "TPIC6B595N" H 10250 1100 50  0001 L CNN "Manufacturer_Part_Number"
+	1    9000 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0119
+U 1 1 6092E639
+P 10600 1800
+F 0 "#PWR0119" H 10600 1550 50  0001 C CNN
+F 1 "GND" H 10605 1627 50  0000 C CNN
+F 2 "" H 10600 1800 50  0001 C CNN
+F 3 "" H 10600 1800 50  0001 C CNN
+	1    10600 1800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0120
+U 1 1 6092E643
+P 10600 2600
+F 0 "#PWR0120" H 10600 2350 50  0001 C CNN
+F 1 "GND" H 10605 2427 50  0000 C CNN
+F 2 "" H 10600 2600 50  0001 C CNN
+F 3 "" H 10600 2600 50  0001 C CNN
+	1    10600 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0121
+U 1 1 6092E64D
+P 8850 2600
+F 0 "#PWR0121" H 8850 2350 50  0001 C CNN
+F 1 "GND" H 8855 2427 50  0000 C CNN
+F 2 "" H 8850 2600 50  0001 C CNN
+F 3 "" H 8850 2600 50  0001 C CNN
+	1    8850 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 2500 8650 2500
+Text Label 8650 2500 0    50   ~ 0
+ENABLE
+$Comp
+L Device:R R32
+U 1 1 6092E659
+P 8500 2250
+F 0 "R32" H 8430 2204 50  0000 R CNN
+F 1 "10k" H 8430 2295 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8430 2250 50  0001 C CNN
+F 3 "~" H 8500 2250 50  0001 C CNN
+	1    8500 2250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR0122
+U 1 1 6092E663
+P 8850 1000
+F 0 "#PWR0122" H 8850 850 50  0001 C CNN
+F 1 "+3.3V" V 8865 1128 50  0000 L CNN
+F 2 "" H 8850 1000 50  0001 C CNN
+F 3 "" H 8850 1000 50  0001 C CNN
+	1    8850 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0123
+U 1 1 6092E66D
+P 9200 1350
+F 0 "#PWR0123" H 9200 1100 50  0001 C CNN
+F 1 "GND" H 9205 1177 50  0000 C CNN
+F 2 "" H 9200 1350 50  0001 C CNN
+F 3 "" H 9200 1350 50  0001 C CNN
+	1    9200 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 6092E677
+P 9200 1200
+F 0 "C4" H 9315 1246 50  0000 L CNN
+F 1 "0.1uF" H 9315 1155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9238 1050 50  0001 C CNN
+F 3 "~" H 9200 1200 50  0001 C CNN
+	1    9200 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9200 1050 8850 1050
+Wire Wire Line
+	8850 1050 8850 1000
+Wire Wire Line
+	8850 1050 8500 1050
+Wire Wire Line
+	8500 1050 8500 2100
+Connection ~ 8850 1050
+Wire Wire Line
+	8850 1050 8850 1800
+Text Label 8850 2000 0    50   ~ 0
+4A
+Text Label 8850 2100 0    50   ~ 0
+4B
+Text Label 8850 2200 0    50   ~ 0
+4C
+Text Label 8850 2300 0    50   ~ 0
+4D
+Wire Wire Line
+	10400 2300 10600 2300
+Wire Wire Line
+	10400 2200 10600 2200
+Wire Wire Line
+	10400 2100 10600 2100
+Wire Wire Line
+	10400 2000 10600 2000
+Text Label 2900 2300 0    50   ~ 0
+1E
+Text Label 2900 2200 0    50   ~ 0
+1F
+Text Label 2900 2100 0    50   ~ 0
+1G
+Text Label 5400 2300 0    50   ~ 0
+2E
+Text Label 5400 2200 0    50   ~ 0
+2F
+Text Label 5400 2100 0    50   ~ 0
+2G
+Text Label 7900 2300 0    50   ~ 0
+3E
+Text Label 7900 2200 0    50   ~ 0
+3F
+Text Label 7900 2100 0    50   ~ 0
+3G
+Wire Wire Line
+	7700 1900 9000 1900
+Text Label 10600 2300 0    50   ~ 0
+4E
+Text Label 10600 2200 0    50   ~ 0
+4F
+Text Label 10600 2100 0    50   ~ 0
+4G
+Text Label 2300 4300 0    50   ~ 0
+ENABLE
+Wire Wire Line
+	2200 4200 2300 4200
+Wire Wire Line
+	2200 4300 2300 4300
+$Comp
+L Connector_Generic:Conn_02x15_Odd_Even J1
+U 1 1 609146E9
+P 3850 4200
+F 0 "J1" H 3900 3275 50  0000 C CNN
+F 1 "Conn_02x15_Odd_Even" H 3900 3366 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x15_P2.54mm_Vertical" H 3850 4200 50  0001 C CNN
+F 3 "~" H 3850 4200 50  0001 C CNN
+	1    3850 4200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4050 3500 4200 3500
+Wire Wire Line
+	4050 3600 4200 3600
+Wire Wire Line
+	4050 3700 4200 3700
+Wire Wire Line
+	4050 3800 4200 3800
+Wire Wire Line
+	4050 3900 4200 3900
+Wire Wire Line
+	4050 4000 4200 4000
+Wire Wire Line
+	4050 4100 4200 4100
+Wire Wire Line
+	4050 4200 4200 4200
+Wire Wire Line
+	4050 4300 4200 4300
+Wire Wire Line
+	4050 4400 4200 4400
+Wire Wire Line
+	4050 4500 4200 4500
+Wire Wire Line
+	4050 4600 4200 4600
+Wire Wire Line
+	4050 4700 4200 4700
+Wire Wire Line
+	4050 4800 4200 4800
+Wire Wire Line
+	4050 4900 4200 4900
+Wire Wire Line
+	3550 4900 3400 4900
+Wire Wire Line
+	3550 4800 3400 4800
+Wire Wire Line
+	3550 4700 3400 4700
+Wire Wire Line
+	3550 4600 3400 4600
+Wire Wire Line
+	3550 4500 3400 4500
+Wire Wire Line
+	3550 4400 3400 4400
+Wire Wire Line
+	3550 4300 3400 4300
+Wire Wire Line
+	3550 4200 3400 4200
+Wire Wire Line
+	3550 4100 3400 4100
+Wire Wire Line
+	3550 4000 3400 4000
+Wire Wire Line
+	3550 3900 3400 3900
+Wire Wire Line
+	3550 3800 3400 3800
+Wire Wire Line
+	3550 3700 3400 3700
+Wire Wire Line
+	3550 3600 3400 3600
+Wire Wire Line
+	3550 3500 3400 3500
+Text Label 4200 3500 0    50   ~ 0
+1A
+Text Label 3400 3500 0    50   ~ 0
+1B
+Text Label 4200 3600 0    50   ~ 0
+1C
+Text Label 3400 3600 0    50   ~ 0
+1D
+Text Label 4200 3700 0    50   ~ 0
+1E
+Text Label 3400 3700 0    50   ~ 0
+1F
+Text Label 4200 3800 0    50   ~ 0
+1G
+Text Label 3400 3800 0    50   ~ 0
+2A
+Text Label 4200 3900 0    50   ~ 0
+2B
+Text Label 3400 3900 0    50   ~ 0
+2C
+Text Label 4200 4000 0    50   ~ 0
+2D
+Text Label 3400 4000 0    50   ~ 0
+2E
+Text Label 4200 4100 0    50   ~ 0
+2F
+Text Label 3400 4100 0    50   ~ 0
+2G
+Text Label 4200 4200 0    50   ~ 0
+3A
+Text Label 3400 4200 0    50   ~ 0
+3B
+Text Label 4200 4300 0    50   ~ 0
+3C
+Text Label 3400 4300 0    50   ~ 0
+3D
+Text Label 4200 4400 0    50   ~ 0
+3E
+Text Label 3400 4400 0    50   ~ 0
+3F
+Text Label 4200 4500 0    50   ~ 0
+3G
+Text Label 3400 4500 0    50   ~ 0
+4A
+Text Label 4200 4600 0    50   ~ 0
+4B
+Text Label 3400 4600 0    50   ~ 0
+4C
+Text Label 4200 4700 0    50   ~ 0
+4D
+Text Label 3400 4700 0    50   ~ 0
+4E
+Text Label 4200 4800 0    50   ~ 0
+4F
+Text Label 3400 4800 0    50   ~ 0
+4G
+$Comp
+L power:+5V #PWR0124
+U 1 1 609B0F85
+P 4200 4900
+F 0 "#PWR0124" H 4200 4750 50  0001 C CNN
+F 1 "+5V" H 4215 5073 50  0000 C CNN
+F 2 "" H 4200 4900 50  0001 C CNN
+F 3 "" H 4200 4900 50  0001 C CNN
+	1    4200 4900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0125
+U 1 1 609B192C
+P 3400 4900
+F 0 "#PWR0125" H 3400 4750 50  0001 C CNN
+F 1 "+5V" H 3415 5073 50  0000 C CNN
+F 2 "" H 3400 4900 50  0001 C CNN
+F 3 "" H 3400 4900 50  0001 C CNN
+	1    3400 4900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L UJC-HP-3-SMT-TR:UJC-HP-3-SMT-TR J2
+U 1 1 609CBBF0
+P 5600 4000
+F 0 "J2" H 5930 3996 50  0000 L CNN
+F 1 "UJC-HP-3-SMT-TR" H 5930 3905 50  0000 L CNN
+F 2 "user-footprints:CUI_UJC-HP-3-SMT-TR" H 5600 4000 50  0001 L BNN
+F 3 "" H 5600 4000 50  0001 L BNN
+F 4 "CUI Devices" H 5600 4000 50  0001 L BNN "MANUFACTURER"
+F 5 "3.16mm" H 5600 4000 50  0001 L BNN "MAXIMUM_PACKAGE_HEIGHT"
+F 6 "Manufacturer Recommendations" H 5600 4000 50  0001 L BNN "STANDARD"
+F 7 "1.0" H 5600 4000 50  0001 L BNN "PARTREV"
+	1    5600 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0126
+U 1 1 609CD08F
+P 5100 4100
+F 0 "#PWR0126" H 5100 3850 50  0001 C CNN
+F 1 "GND" V 5105 3972 50  0000 R CNN
+F 2 "" H 5100 4100 50  0001 C CNN
+F 3 "" H 5100 4100 50  0001 C CNN
+	1    5100 4100
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0127
+U 1 1 609CD4D1
+P 5100 4000
+F 0 "#PWR0127" H 5100 3850 50  0001 C CNN
+F 1 "+5V" H 5115 4173 50  0000 C CNN
+F 2 "" H 5100 4000 50  0001 C CNN
+F 3 "" H 5100 4000 50  0001 C CNN
+	1    5100 4000
+	0    -1   -1   0   
+$EndComp
+$EndSCHEMATC
