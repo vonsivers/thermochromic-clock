@@ -3,8 +3,7 @@
 #include <ESP8266WiFi.h>            // we need wifi to get internet access
 #include <time.h>                   // time() ctime()
 
-const char *ssid     = "xxxx";
-const char *password = "xxxx";
+#include <WiFiManager.h> // https://github.com/tzapu/WiFiManager
 
 //#define DEBUG // activate output to serial
 
@@ -70,14 +69,24 @@ void setup() {
   // delay a little
   delay(1000);
   
-  WiFi.mode(WIFI_STA);
-  WiFi.begin(ssid, password);
-  DEBUG_PRINT("connecting to WiFI");
-  while ( WiFi.status() != WL_CONNECTED ) {
-    delay ( 500 );
-    DEBUG_PRINT ( "." );
+  WiFi.mode(WIFI_STA); // explicitly set mode, esp defaults to STA+AP
+  
+  //WiFiManager
+  //Local intialization. Once its business is done, there is no need to keep it around
+  WiFiManager wm;
+  //reset settings - for testing
+  //wm.resetSettings();
+
+  //fetches ssid and pass and tries to connect
+  //if it does not connect it starts an access point with the specified name
+  //and goes into a blocking loop awaiting configuration
+  if (!wm.autoConnect("ThermochromicAP")) {
+    DEBUG_PRINTLN("failed to connect Wifi and hit timeout");
+    //reset and try again, or maybe put it to deep sleep
+    ESP.restart();
+    delay(1000);
   }
-  DEBUG_PRINTLN("connected!");
+  DEBUG_PRINTLN("Wifi connected");
 
   configTime(MY_TZ, MY_NTP_SERVER); // configure NTP server and timezone
 
